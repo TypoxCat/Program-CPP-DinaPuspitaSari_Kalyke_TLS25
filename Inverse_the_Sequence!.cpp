@@ -2,17 +2,21 @@
 using namespace std;
 
 int main(){
+    // declare variable
     int n, input, lastDigit, reversed = 0, sum = 0;
-    bool zero = false, isEven = true, isNegative = false;
-    // get the n
+    bool isEven = true, isNegative = false;
+    
+    // get the array length
     cout << "Enter the length of the array: ";
     cin >> n;
+
+    //get the array elements
     int i = 1;
-    
     while(i <= n){
         cout << "Enter the " << i << " / " << n << " number: ";
         cin >> input;
         if (isEven){
+            // check whether is negative
             if (input < 0){
                 isNegative = true;
                 input *= -1;
@@ -20,12 +24,9 @@ int main(){
             while(input > 0){
                 lastDigit = input % 10;
                 if (lastDigit != 0){
-                    //cout << lastDigit;
-                    input = input/10;
-                    zero = false;
                     reversed += lastDigit;
+                    input = input/10;
                 } else {
-                    zero = true;
                     input = input/10;
                 }
                 reversed *= 10;
