@@ -10,13 +10,11 @@ int main() {
     duration -= 44; //assuming the duration always more than 44
     while (duration > 0 && duration >= lightDuration[state]){
         duration -= lightDuration[state];
-        cout << duration << " ";
         if (state == 2){
             state = 0;
         } else {
             state++;
         }
-        cout << state << endl;
     }
     cout << "The last color is " << color[state] << endl;
 }
