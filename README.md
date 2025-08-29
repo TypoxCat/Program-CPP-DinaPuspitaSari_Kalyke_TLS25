@@ -21,12 +21,9 @@ Clue: You may use the following array as an example:
 Expected answer: 210
 
 Notice:
-Integers in the array may be smaller post-transformation (210
--> 12)
-Negative signs should not be erased, whether or not the
-transformation effects it or not
-If in the array there exists element “0”, the result would still be
-“0”, not empty.
+Integers in the array may be smaller post-transformation (210 -> 12)
+Negative signs should not be erased, whether or not the transformation effects it or not
+If in the array there exists element “0”, the result would still be “0”, not empty.
 
 2. The Lost Password
 A mysterious case happened in New York City! Detective Timothy is looking at the

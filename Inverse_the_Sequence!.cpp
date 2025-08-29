@@ -10,7 +10,7 @@ int main(){
     cout << "Enter the length of the array: ";
     cin >> n;
 
-    //get the array elements
+    // get the array elements
     int i = 1;
     while(i <= n){
         cout << "Enter the " << i << " / " << n << " number: ";
@@ -21,6 +21,7 @@ int main(){
                 isNegative = true;
                 input *= -1;
             }
+
             while(input > 0){
                 lastDigit = input % 10;
                 if (lastDigit != 0){
@@ -29,20 +30,23 @@ int main(){
                 } else {
                     input = input/10;
                 }
-                reversed *= 10;
+                reversed *= 10; 
             }
             
+            // return the negative sign
             if (isNegative){
                 reversed *= -1;
+                isNegative = false;
             }
             
             reversed /= 10;
             sum += reversed;
             reversed = 0;
             isEven = false;
+        } else {
+            sum += input;
+            isEven = true;
         }
-        sum += input;
-        isEven = true;
         i++;
     }
     cout << "Sum: " << sum << endl;
